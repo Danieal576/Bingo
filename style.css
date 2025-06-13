@@ -1,0 +1,222 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background: #f0f4f8;
+            min-height: 100vh;
+            overflow: auto;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 5px;
+            width: 100%;
+            max-width: 1800px;
+            min-height: 95vh;
+        }
+
+        #bingo-board {
+            background: #2196F3;
+            border-radius: 15px;
+            padding: 0px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
+
+        #bingo-board h3 {
+            color: white;
+            margin: 0 0 15px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .board-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2px; /* Minimized the gap between columns */
+        width: 100%;
+        }
+
+        .board-column {
+            background: #B3E5FC;
+            border-radius: 8px;
+            padding: 3px;
+        }
+
+        .board-header {
+            text-align: center;
+            font-weight: bold;
+            color: #0D47A1;
+            margin-bottom: 10px;
+            font-size: 36px; /* Increased by 50% */
+        }
+
+        .board-cells {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+        }
+
+        .board-cell {
+            background: white;
+            border: 1px solid #81D4FA;
+            border-radius: 14px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 60px;
+        }
+
+        .board-cell.marked {
+            background: #FF5252;
+            color: white;
+            transform: scale(0.95);
+        }
+
+        #right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: #E8F5E9;
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #pattern-editor {
+        background: white;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        max-height: 300px; /* Limit the height of the Pattern Editor */
+        overflow: auto; /* Add scroll if content overflows */
+    }
+
+        #pattern-editor h3 {
+            font-size: 18px;
+            color: #01579B;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .editor-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1px; /* Reduce the space between cells */
+        margin: 0 auto;
+        max-width: 200px; /* Reduce the width of the grid */
+    }
+
+    .editor-cell {
+        background: white;
+        border: 1px solid #4CAF50; /* Reduced border size */
+        border-radius: 10px; /* Slightly smaller border radius */
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: bold;
+        font-size: 18px; /* Reduced font size */
+    }
+
+        .editor-cell.selected {
+            background: #FFEB3B;
+            border-color: #FFC107;
+        }
+
+        .editor-cell.free-cell {
+            background: #e0e0e0;
+            font-weight: bold;
+        }
+
+        .editor-cell.marked {
+            background: #FF5252;
+            color: white;
+        }
+
+        .editor-cell.display-mode {
+            cursor: default;
+        }
+
+        #pattern-controls {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        #clicked-numbers {
+        background: #C8E6C9;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+   .numbers-list {
+        font-size: 150px; /* Large font size */
+        font-weight: bold;
+        color: red;
+        margin: 10px auto;
+        width: 200px; /* Fixed width for ellipse */
+        height: 160px; /* Fixed height for ellipse */
+        border: 2px solid blue; /* Solid blue border */
+        border-radius: 50%; /* Make it elliptical */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0; /* No padding */
+        box-sizing: border-box; /* Include border in size calculations */
+        background: none; /* Remove background color */
+        box-shadow: none; /* Remove any box shadow */
+    }
+        #remaining-numbers {
+            background: #BBDEFB;
+            padding: 0px;
+            border-radius: 2px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #remaining-count {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0D47A1;
+        }
+
+        .controls-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: blue;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        #new-game-btn {
+            background: #f44336;
+        }
