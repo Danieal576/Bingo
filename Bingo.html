@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bingo Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <div id="bingo-board">
+            <h3>🎲 Bingo Board</h3>
+            <div class="board-container"></div>
+        </div>
+
+        <div id="right-panel">
+            <div id="pattern-editor">
+                <h3>🎨 Pattern Editor</h3>
+                <div class="editor-grid" id="pattern-grid"></div>
+                <div id="pattern-controls">
+                    <button id="edit-pattern-btn">Edit Pattern</button>
+                    <button id="apply-pattern-btn">Apply Pattern</button>
+                </div>
+            </div>
+
+            <div id="clicked-numbers">
+                
+                <div class="numbers-list">-</div>
+            </div>
+
+            <div id="remaining-numbers">
+                <h3>Remaining Numbers</h3>
+                <div id="remaining-count">75</div>
+            </div>
+
+            <div class="controls-container">
+                <input type="text" id="search-input" placeholder="Enter cartela number">
+                <button id="search-btn">🔍 Search Cartela</button>
+                <button id="new-game-btn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        &copy;copyright 2025 <i>SOLOMON ADUGNA(Phone Number 0902013487)</i>
+    </footer>
+</body>
+</html>
